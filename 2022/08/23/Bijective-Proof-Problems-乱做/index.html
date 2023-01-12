@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bijective Proof Problems 乱做 | World Slit</title><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search the blog","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script>mermaid.initialize({
+ startOnLoad: true
+ , theme: 'dark'
+});</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="World Slit" type="application/atom+xml">
+</head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><ol class="navContent"><li class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search the blog" spellcheck="false" maxlength="50" type="text" id="search-input"></span></li><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav><div class="search-popup"><div id="search-result"></div></div></header><article><div id="post-bg"><div id="post-title"><h1>Bijective Proof Problems 乱做</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2022-08-23T03:18:59.000Z" id="date"> 2022-08-23</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-01-12T09:29:25.986Z" id="updated"> 2023-01-12</time></div></span></div></div><hr><div id="post-content"><p><a target="_blank" rel="noopener" href="http://www-math.mit.edu/~rstan/bij.pdf">链接</a></p>
+<p>有误（证明出错，或者用了 GF 等非组合意义方法）请指出。</p>
+<p>本人数学水平极低，故本文基本上纯口胡，可能有大量不严谨之处，请提前备好降压药（</p>
+<p>不在这上面的都是不会的。</p>
+<p>自评难度说明：<script type="math/tex">x.5</script> 表示难度 <script type="math/tex">x</script> 的标准，<script type="math/tex">+/-</script> 对应 <script type="math/tex">\pm 0.3</script>。在此基础上存在一定浮动。本人实力视为 <script type="math/tex">2.3</script>。</p>
+<h2 id="Elementary-Combinatorics"><a href="#Elementary-Combinatorics" class="headerlink" title="Elementary Combinatorics"></a>Elementary Combinatorics</h2><h3 id="Prob-3-2"><a href="#Prob-3-2" class="headerlink" title="Prob 3 [2]"></a>Prob 3 [2]</h3><blockquote>
+<p>自评：1.6 [1]</p>
+</blockquote>
+<p>将 <script type="math/tex">n</script> 视为一行 <script type="math/tex">n</script> 个点，考虑隔板法。一个有序划分的方案即为在相邻两点间的间隙放隔板的方案。</p>
+<p>共有 <script type="math/tex">n-1</script> 个间隙，每个间隙可以选择放或不放隔板，则放隔板的方案数为 <script type="math/tex">2^{n-1}</script>。</p>
+<p>对于一个间隙，钦定其放了一个隔板，则划分数等于在剩下的所有间隙中任意放隔板的方案数，即 <script type="math/tex">2^{n-2}</script>，即这个隔板会对 <script type="math/tex">2^{n-2}</script> 种有序划分产生 <code>1</code> 的贡献。因此所有有序划分的隔板数之和为 <script type="math/tex">(n-1)2^{n-2}</script>。</p>
+<p>对于一种划分，其部分数等于隔板数 <code>+1</code>，故部分数之和为 <script type="math/tex">(n-1)2^{n-2}+2^{n-1}=(n+1)2^{n-2}</script>。</p>
+<h3 id="Prob-5-2"><a href="#Prob-5-2" class="headerlink" title="Prob 5 [2]"></a>Prob 5 [2]</h3><blockquote>
+<p>自评：1.3 [1]</p>
+</blockquote>
+<p>考虑每个元素 <script type="math/tex">i</script> 所在的集合的编号所成的集合 <script type="math/tex">S_{i}'</script>。对于题中所给的三个条件，所有 <script type="math/tex">S_{i}'</script> 间互相独立。</p>
+<p>(a)</p>
+<p>所有 <script type="math/tex">S'</script> 的取值有 <script type="math/tex">\varnothing,\{1\},\{1,2\},\cdots,\{1,2,\cdots,k\}</script> 共 <script type="math/tex">k+1</script> 种，故方案数为 <script type="math/tex">(k+1)^n</script>。</p>
+<p>(b)</p>
+<p>所有 <script type="math/tex">S'</script> 的取值有 <script type="math/tex">\varnothing,\{1\},\{2\},\cdots,\{k\}</script> 共 <script type="math/tex">k+1</script> 种，故方案数为 <script type="math/tex">(k+1)^n</script>。</p>
+<p>(c)</p>
+<p>所有 <script type="math/tex">S</script> 的交集为空，即没有一个元素在所有 <script type="math/tex">S</script> 中，即所有的 <script type="math/tex">S' \neq \{x|x \in [1,k] \cap \mathbb{Z}\}</script>，故 <script type="math/tex">S'</script> 的取值有 <script type="math/tex">2^k-1</script> 种。方案数为 <script type="math/tex">(2^k-1)^n</script>。</p>
+<h3 id="Prob-25-2"><a href="#Prob-25-2" class="headerlink" title="Prob 25 [2]"></a>Prob 25 [2]</h3><blockquote>
+<p>自评：Huh?</p>
+</blockquote>
+<p>隔板法。前人之述备矣。</p>
+<h3 id="Prob-26-2"><a href="#Prob-26-2" class="headerlink" title="Prob 26 [2-]"></a>Prob 26 [2-]</h3><blockquote>
+<p>自评：Huh?</p>
+</blockquote>
+<p>对 <script type="math/tex">x_n</script> 做前缀和，然后同 <code>Prob 25</code>。</p>
+<h2 id="Permutation"><a href="#Permutation" class="headerlink" title="Permutation"></a>Permutation</h2><h3 id="Prob-44-2"><a href="#Prob-44-2" class="headerlink" title="Prob 44 [2-]"></a>Prob 44 [2-]</h3><blockquote>
+<p>自评：1.5 [1]</p>
+</blockquote>
+<p>对于每个位置，钦定其为不动点，满足条件的排列数为 <script type="math/tex">(n-1)!</script>，和即为 <script type="math/tex">n!</script>。</p>
+<h3 id="Prob-47-2"><a href="#Prob-47-2" class="headerlink" title="Prob 47 [2-]"></a>Prob 47 [2-]</h3><blockquote>
+<p>自评：2.0 [2-]</p>
+</blockquote>
+<p>考虑从小到大放每个数，发现最终形成的数列一定单谷，于是等同于单谷排列数 <script type="math/tex">2^{n-1}</script>。</p>
+<h3 id="Prob-48-2"><a href="#Prob-48-2" class="headerlink" title="Prob 48 [2-]"></a>Prob 48 [2-]</h3><blockquote>
+<p>自评：2.0 [2-]</p>
+</blockquote>
+<p>条件等同于每一个前缀的值域均连续，发现排列的逆即为 <code>Prob 47</code>。</p>
+<h3 id="Prob-57-2"><a href="#Prob-57-2" class="headerlink" title="Prob 57 [2]"></a>Prob 57 [2]</h3><blockquote>
+<p>自评：2.2 [2-]</p>
+</blockquote>
+<p>把 <script type="math/tex">1</script> 所在环从 <script type="math/tex">1</script> 开始顺次写下，再把剩下的部分接在后面。发现这与长为 <script type="math/tex">n</script> 且首位为 <script type="math/tex">1</script> 的排列一一对应，即 <script type="math/tex">f_{n,k}=(n-1)!,p_{n,k}={1 \over n}(k=1,2,\cdots,n)</script>。</p>
+<h3 id="Prob-58"><a href="#Prob-58" class="headerlink" title="Prob 58"></a>Prob 58</h3><h4 id="a-2"><a href="#a-2" class="headerlink" title="a [2]"></a>a [2]</h4><blockquote>
+<p>自评：2.2 [2-]</p>
+</blockquote>
+<p>枚举一个环长 <script type="math/tex">L \in [1,n] \cap \mathbb{Z}</script>，做 <code>Prob 57</code> 的变换后，条件即为 <script type="math/tex">2 \le pos_2 \le L</script>，由于除 <script type="math/tex">1</script> 外每个位置相互独立，故概率为 <script type="math/tex">L-1 \over n-1</script>，求平均值得到 <script type="math/tex">1 \over 2</script>。</p>
+<h4 id="b-2"><a href="#b-2" class="headerlink" title="b [2+]"></a>b [2+]</h4><blockquote>
+<p>自评：2.3 [2]</p>
+</blockquote>
+<p>将每个环以最小值开头依次写下，然后就显然了。</p>
+<h3 id="Gu-Prob-72-2"><a href="#Gu-Prob-72-2" class="headerlink" title="Gu: Prob 72 [2]"></a>Gu: Prob 72 [2]</h3><blockquote>
+<p>自评：2.6 [2]</p>
+</blockquote>
+<p>忘了。Cheers。</p>
+<h2 id="Partitions"><a href="#Partitions" class="headerlink" title="Partitions"></a>Partitions</h2><h3 id="Prob-93-2"><a href="#Prob-93-2" class="headerlink" title="Prob 93 [2-]"></a>Prob 93 [2-]</h3><blockquote>
+<p>自评：2.6 [2]</p>
+</blockquote>
+<p>把所有划分分成两类：<script type="math/tex">\lambda_1 \neq \lambda_2</script> 和 <script type="math/tex">\lambda_1 = \lambda_2</script>（不存在视为 <script type="math/tex">0</script>），记为 <script type="math/tex">A,B</script>。然后尝试建立 <script type="math/tex">A,B</script> 间的双射。</p>
+<ul>
+<li><script type="math/tex">A \mapsto B</script>：将 <script type="math/tex">\lambda_1</script> 拆成两个 <script type="math/tex">\lambda_1 \over 2</script>；</li>
+<li><script type="math/tex">B \mapsto A</script>：将 <script type="math/tex">\lambda_1,\lambda_2</script> 合成 <script type="math/tex">2\lambda_1</script>；</li>
+</ul>
+<p>于是我们证明了 <script type="math/tex">A,B</script> 数量相等，又因为所有划分非 <script type="math/tex">A</script> 即 <script type="math/tex">B</script>，所以满足条件的划分数为偶数。</p>
+<h3 id="Gu-Prob-119-3"><a href="#Gu-Prob-119-3" class="headerlink" title="Gu: Prob 119 [3-]"></a>Gu: Prob 119 [3-]</h3><blockquote>
+<p>忘了。</p>
+</blockquote>
+<p>忘了。（可能根本没证出来过，咕了。）</p>
+<h3 id="Gu-Prob-126-2"><a href="#Gu-Prob-126-2" class="headerlink" title="Gu: Prob 126 [2+]"></a>Gu: Prob 126 [2+]</h3><blockquote>
+<p>自评：2.8 [2+]</p>
+</blockquote>
+<p>忘了。这个屑极其健忘。</p>
+<h2 id="Trees"><a href="#Trees" class="headerlink" title="Trees"></a>Trees</h2><h3 id="Prob-128-3"><a href="#Prob-128-3" class="headerlink" title="Prob 128 [3-]"></a>Prob 128 [3-]</h3><blockquote>
+<p>自评：Huh?</p>
+</blockquote>
+<p><code>Prüfer</code> 序列。<code>Prob 131</code> 和 <code>Prob 142</code> 是裸题，跳过。</p>
+<h3 id="Prob-137-3"><a href="#Prob-137-3" class="headerlink" title="Prob 137 [3]"></a>Prob 137 [3]</h3><blockquote>
+<p>自评：2.9 [2+]</p>
+</blockquote>
+<p>对 CS 玩家极其友善题。</p>
+<p>对于一个 <script type="math/tex">\rm{inv}(\tau)=i</script>，将 <script type="math/tex">t+1</script> 带进去得到 <script type="math/tex">\sum\limits_{j=0}^{i}\binom{i}{j}t^j</script>，于是猜想对于一棵树 <script type="math/tex">\tau</script> 和其逆序对集合的一个子集 <script type="math/tex">S</script>，二元组 <script type="math/tex">(\tau,S)</script> 与 <script type="math/tex">G</script> 存在一个双射。</p>
+<p>一个直观的想法是直接连 <script type="math/tex">S</script> 中的所有点对，但是这样连不到 <script type="math/tex">1</script>，且可能出现重边，考虑调整。对于一个逆序对 <script type="math/tex">(i,j)</script>，考虑连边 <script type="math/tex">(i,fa_j)</script>。下面证明这样生成的图包括所有简单连通无向图且不重复。</p>
+<p>要证上述命题，即证对于所有简单连通无向图 <script type="math/tex">G</script>，有且仅有一棵生成树 <script type="math/tex">T</script> 满足通过这棵树可以构造出 <script type="math/tex">G</script>。</p>
+<p>首先所有的非树边必须不是横跨边，同时每条边都必须满足 <script type="math/tex">(i,fa_j)</script> 的形式。先随便找个生成树（如 <code>BFS</code> 树），之后逐条考虑原始非树边。若这条非树边满足条件则直接跳过，否则将其加入生成树。这样会形成一个环，然后对于加入的边的两端点的 <code>LCA</code> 与环上相邻节点中编号较小的点形成的边，将其从生成树中删除，成为非树边。过程的每一步均会产生唯一的结果。于是上述命题成立。</p>
+<p>不难发现 <script type="math/tex">e(G)=n-1+|S|</script>，于是原命题成立。</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-start"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/01/10/hello-world/">← Next Hello World</a></div></div></div></div><div id="bottom-btn"><a id="to-index" href="#toc-div" title="Catalog">≡</a><a id="to-top" onClick="scrolls.scrolltop();" title="to top" style="opacity: 0; display: none;">∧</a></div></article><aside><div id="aside-top"><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/4.png" alt="Logo"></a><h1 id="Dr"><a href="/">Ratziel1236</a></h1><div id="description"><p>Face the fear, map the ego.</p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Elementary-Combinatorics"><span class="toc-number">1.</span> <span class="toc-text">Elementary Combinatorics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-3-2"><span class="toc-number">1.1.</span> <span class="toc-text">Prob 3 [2]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-5-2"><span class="toc-number">1.2.</span> <span class="toc-text">Prob 5 [2]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-25-2"><span class="toc-number">1.3.</span> <span class="toc-text">Prob 25 [2]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-26-2"><span class="toc-number">1.4.</span> <span class="toc-text">Prob 26 [2-]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Permutation"><span class="toc-number">2.</span> <span class="toc-text">Permutation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-44-2"><span class="toc-number">2.1.</span> <span class="toc-text">Prob 44 [2-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-47-2"><span class="toc-number">2.2.</span> <span class="toc-text">Prob 47 [2-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-48-2"><span class="toc-number">2.3.</span> <span class="toc-text">Prob 48 [2-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-57-2"><span class="toc-number">2.4.</span> <span class="toc-text">Prob 57 [2]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-58"><span class="toc-number">2.5.</span> <span class="toc-text">Prob 58</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-2"><span class="toc-number">2.5.1.</span> <span class="toc-text">a [2]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b-2"><span class="toc-number">2.5.2.</span> <span class="toc-text">b [2+]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gu-Prob-72-2"><span class="toc-number">2.6.</span> <span class="toc-text">Gu: Prob 72 [2]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partitions"><span class="toc-number">3.</span> <span class="toc-text">Partitions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-93-2"><span class="toc-number">3.1.</span> <span class="toc-text">Prob 93 [2-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gu-Prob-119-3"><span class="toc-number">3.2.</span> <span class="toc-text">Gu: Prob 119 [3-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gu-Prob-126-2"><span class="toc-number">3.3.</span> <span class="toc-text">Gu: Prob 126 [2+]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trees"><span class="toc-number">4.</span> <span class="toc-text">Trees</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-128-3"><span class="toc-number">4.1.</span> <span class="toc-text">Prob 128 [3-]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prob-137-3"><span class="toc-number">4.2.</span> <span class="toc-text">Prob 137 [3]</span></a></li></ol></li></ol></div></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknight</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script class="pjax-js">reset=_=>{code.findCode();mermaid.init(undefined, ('.mermaid'));}</script><script src="/js/arknights.js"></script><script>window.addEventListener("load",()=>{reset()})</script></body></html>
